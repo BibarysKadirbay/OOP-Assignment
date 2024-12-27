@@ -14,6 +14,31 @@ public class Student extends Person {
         this.grades = new ArrayList<>();
         this.studentID = ID++;
     }
+
+    public int getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
+    }
+
+    public static int getID() {
+        return ID;
+    }
+
+    public static void setID(int ID) {
+        Student.ID = ID;
+    }
+
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
+
+    public void setGrades(ArrayList<Integer> grades) {
+        this.grades = grades;
+    }
+
     public double convertGPA(int grade){
         if(grade >= 95) return 4.0;
         else if(grade >= 90) return 3.67;
