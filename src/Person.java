@@ -1,16 +1,27 @@
+import java.util.Random;
+
 public class Person {
     private String name;
     private String surname;
     private int age;
     private boolean gender;
+    private int PersonID ;
+    private static Random randID = new Random();
     public Person(){}
     public Person(String name, String surname, int age, boolean gender) {
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.gender = gender;
+        this.PersonID = 100000 + randID.nextInt(900000);
     }
 
+    public int getPersonID() {
+        return PersonID;
+    }
+    public void setPersonID(int personID) {
+        PersonID = personID;
+    }
     public String getName() {
         return name;
     }
