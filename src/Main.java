@@ -4,8 +4,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         School school = new School();
-        File file = new File("/Users/bibaryskadyrbaj/Downloads/student.txt");
-        Scanner scanner = new Scanner(file);
+        File fileStudents = new File("src/student.txt");
+        Scanner scanner = new Scanner(fileStudents);
         while(scanner.hasNextLine()) {
             String[] info = scanner.nextLine().split(" ");
             Student student = new Student();
@@ -17,8 +17,8 @@ public class Main {
             school.addMember(student);
         }
         scanner.close();
-        File file1 = new File("/Users/bibaryskadyrbaj/Downloads/teacher.txt");
-        Scanner scan = new Scanner(file1);
+        File fileTeachers = new File("src/teacher.txt");
+        Scanner scan = new Scanner(fileTeachers);
         while(scan.hasNextLine()) {
             String[] info = scan.nextLine().split(" ");
             Teacher teacher = new Teacher();
